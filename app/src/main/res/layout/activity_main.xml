@@ -429,7 +429,8 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:padding="8dp"
@@ -453,7 +454,8 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:padding="8dp"
@@ -477,7 +479,8 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:padding="8dp"
@@ -491,115 +494,6 @@
                     android:textSize="20sp"
                     android:hint="@string/enter_ppm"/>
 
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="48dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:padding="8dp"
-                android:text="@string/ph"
-                android:textColor="@color/black"/>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/enter_pH"
-                android:textSize="20sp"
-                android:hint="@string/enter_pH"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="48dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="8dp"
-                    android:text="@string/nitrite"
-                    android:textColor="@color/black"/>
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <RadioButton
-                        android:id="@+id/safe_nitrite_radio_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/safe"
-                        android:textSize="20sp"
-                        android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
-                    <RadioButton
-                        android:id="@+id/unsafe_nitrite_radio_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/unsafe"
-                        android:textSize="20sp"
-                        android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
-                   </RadioGroup>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="8dp"
-                    android:text="@string/nitrate"
-                    android:textColor="@color/black"/>
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <RadioButton
-                        android:id="@+id/safe_nitrate_radio_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/safe"
-                        android:textSize="20sp"
-                        android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
-                    <RadioButton
-                        android:id="@+id/unsafe_nitrate_radio_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/unsafe"
-                        android:textSize="20sp"
-                        android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
-                </RadioGroup>
             </LinearLayout>
 
         </LinearLayout>
@@ -658,6 +552,30 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:text="@string/ph"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enter_pH"
+                    android:textSize="20sp"
+                    android:hint="@string/enter_pH"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -669,16 +587,16 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:padding="8dp"
                     android:textColor="@color/black"
+                    android:gravity="center_horizontal"
                     android:text="@string/bacteria" />
 
                 <RadioGroup
@@ -692,7 +610,7 @@
                         android:text="@string/negative"
                         android:textSize="20sp"
                         android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="24dp"/>
                     <RadioButton
                         android:id="@+id/positive_bacteria_radio_button"
                         android:layout_width="wrap_content"
@@ -700,7 +618,7 @@
                         android:text="@string/positive"
                         android:textSize="20sp"
                         android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="24dp"/>
                 </RadioGroup>
 
             </LinearLayout>
@@ -708,15 +626,15 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:padding="8dp"
+                    android:gravity="center_horizontal"
                     android:textColor="@color/black"
                     android:text="@string/pesticide" />
 
@@ -731,7 +649,7 @@
                         android:text="@string/negative"
                         android:textSize="20sp"
                         android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="24dp"/>
                     <RadioButton
                         android:id="@+id/positive_pesticide_radio_button"
                         android:layout_width="wrap_content"
@@ -739,7 +657,7 @@
                         android:text="@string/positive"
                         android:textSize="20sp"
                         android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="24dp"/>
                 </RadioGroup>
 
             </LinearLayout>
@@ -747,16 +665,16 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:padding="8dp"
                     android:textColor="@color/black"
+                    android:gravity="center_horizontal"
                     android:text="@string/lead" />
 
                 <RadioGroup
@@ -770,7 +688,7 @@
                         android:text="@string/negative"
                         android:textSize="20sp"
                         android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="24dp"/>
                     <RadioButton
                         android:id="@+id/positive_lead_radio_button"
                         android:layout_width="wrap_content"
@@ -778,9 +696,100 @@
                         android:text="@string/positive"
                         android:textSize="20sp"
                         android:textColor="#575757"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="24dp"/>
                 </RadioGroup>
 
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/nitrite"
+                    android:textColor="@color/black"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/safe_nitrite_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/safe"
+                        android:textSize="20sp"
+                        android:textColor="#575757"
+                        android:layout_marginStart="24dp"/>
+                    <RadioButton
+                        android:id="@+id/unsafe_nitrite_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unsafe"
+                        android:textSize="20sp"
+                        android:textColor="#575757"
+                        android:layout_marginStart="24dp"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/nitrate"
+                    android:textColor="@color/black"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/safe_nitrate_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/safe"
+                        android:textSize="20sp"
+                        android:textColor="#575757"
+                        android:layout_marginStart="24dp"/>
+                    <RadioButton
+                        android:id="@+id/unsafe_nitrate_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unsafe"
+                        android:textSize="20sp"
+                        android:textColor="#575757"
+                        android:layout_marginStart="24dp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
             </LinearLayout>
 
         </LinearLayout>
@@ -791,8 +800,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="64dp"
             android:layout_marginBottom="48dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp"
+            android:padding="16dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
             android:text="@string/submit"
             android:onClick="submitResults"/>
 

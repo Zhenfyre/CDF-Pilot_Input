@@ -10,6 +10,9 @@ import android.widget.TextView;
  */
 public class MainActivity extends AppCompatActivity {
 
+    String dateWaterCollected;
+    String timeWaterCollected;
+    String tabletNumber;
     int bathroomSinkDrinking;
     int bathroomSinkTeeth;
     int bathroomSinkHandwashing;
