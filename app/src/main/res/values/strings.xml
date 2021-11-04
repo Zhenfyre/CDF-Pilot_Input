@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">CDF-Pilot_Input</string>
+    <string name="enter_value">enter value</string>
+    <string name="iron">Iron</string>
+    <string name="copper">Copper</string>
+    <string name="select_one">select one</string>
+    <string name="nitrate">Nitrate</string>
+    <string name="nitrite">Nitrite</string>
+    <string name="ph">pH = </string>
+    <string name="alkalinity">Alkalinity</string>
+    <string name="total_chlorine">Total Chlorine</string>
+    <string name="total_hardness">Total Hardness</string>
+    <string name="type_description">type description</string>
+    <string name="water_taste">Only if you feel comfortable drinking the water, describe the taste of the water:</string>
+    <string name="water_smell">Describe the smell of the water:</string>
+    <string name="water_appearance">Describe the color/appearance of the water:</string>
+    <string name="temperature">Temperature of water achieved before collection:</string>
+    <string name="default_time">0 seconds</string>
+    <string name="time_running">Enter number of seconds running water before collection (1 min = 60 seconds):</string>
+    <string name="normal_use">What do you normally use water from the bathroom sink for? Check all that apply or None. </string>
+    <string name="page_title">Report Water Testing Results</string>
+    <string name="bacteria">Bacteria</string>
+    <string name="pesticide">Pesticide</string>
+    <string name="lead">Lead</string>
+    <string name="rottenEgg_smell">Does the water have a rotten egg odor?</string>
+    <string name="sediment">Is there sediment in the bottom of the container?</string>
+    <string name="feathery">Does the sediment have a feathery appearance?</string>
+    <string name="submit">Submit Results</string>
+    <string name="drinking">Drinking</string>
+    <string name="brushing_teeth">Brushing Teeth</string>
+    <string name="handwashing">Handwashing</string>
+    <string name="none">None</string>
+    <string name="scalding">Scalding</string>
+    <string name="hot">Hot</string>
+    <string name="warm">Warm</string>
+    <string name="tepid">Tepid</string>
+    <string name="cool">Cool</string>
+    <string name="cold">Cold</string>
+    <string name="water_color_description">The water is \u0020 \u0020 ... \u0020 \u0020 in color</string>
+    <string name="water_smell_description">The water smells like...</string>
+    <string name="water_taste_description">The water tastes...</string>
+    <string name="enter_ppm">\u0020 \u0020 \u0020 \u0020 \u0020 \u0020  ppm</string>
+    <string name="enter_pH"> \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 </string>
+    <string name="safe">Safe</string>
+    <string name="unsafe">Unsafe</string>
+    <string name="negative">Negative</string>
+    <string name="positive">Positive</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="defaultTabletNumber">\u0020 \u0020 000 \u0020 \u0020 </string>
+    <string name="date_of_collection">Date of Collection</string>
+    <string name="mm_dd_yyyy">MM/DD/YYYY</string>
+    <string name="time_of_collection">Time of Collection</string>
+    <string name="hh_mm_am_pm">hh:mm am/pm</string>
+    <string name="tablet_number">Tablet Number</string>
+    <string name="testStripSectionTitle">Enter the values indicated from each of your test strips:</string>
+</resources>
