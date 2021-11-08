@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CDF-Pilot_Input</string>
+    <string name="app_name">CDF Pilot</string>
     <string name="enter_value">enter value</string>
     <string name="iron">Iron</string>
     <string name="copper">Copper</string>
