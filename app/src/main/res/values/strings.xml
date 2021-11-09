@@ -55,4 +55,6 @@
     <string name="tablet_number">Tablet Number</string>
     <string name="testStripSectionTitle">Enter the values indicated from each of your test strips:</string>
     <string name="summary">Summary: </string>
+    <string name="running_time_short">Running Time</string>
+    <string name="water_temp_short">Temperature</string>
 </resources>
