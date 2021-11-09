@@ -181,12 +181,48 @@ public class MainActivity extends AppCompatActivity {
         Editable phEditable = phField.getText();
         String pH = phEditable.toString();
 
+        // Get Bacteria
+        boolean bacteria = false;
+        RadioButton bacteriaButton = (RadioButton) findViewById(R.id.positive_bacteria_radio_button);
+        boolean ifBacteria = bacteriaButton.isChecked();
+        if (ifBacteria)
+        {bacteria = true;}
+
+        // Get Pesticide
+        boolean pesticide = false;
+        RadioButton pesticideButton = (RadioButton) findViewById(R.id.positive_pesticide_radio_button);
+        boolean ifPesticide = pesticideButton.isChecked();
+        if (ifPesticide)
+        {pesticide = true;}
+
+        // Get Lead
+        boolean lead = false;
+        RadioButton leadButton = (RadioButton) findViewById(R.id.positive_lead_radio_button);
+        boolean ifLead = leadButton.isChecked();
+        if (ifLead)
+        {lead = true;}
+
+        // Get Nitrite
+        boolean nitrite = false;
+        RadioButton nitriteButton = (RadioButton) findViewById(R.id.unsafe_nitrite_radio_button);
+        boolean ifNitrite = nitriteButton.isChecked();
+        if (ifNitrite)
+        {nitrite = true;}
+
+        // Get Nitrate
+        boolean nitrate = false;
+        RadioButton nitrateButton = (RadioButton) findViewById(R.id.unsafe_nitrate_radio_button);
+        boolean ifNitrate = nitrateButton.isChecked();
+        if (ifNitrate)
+        {nitrate = true;}
+
 
         // Display the results summary
         String message = createResultsSummary(dateCollection, timeCollection, tabletNumber,
                 timeRunning, waterTemperature, noneDrinking, noneBrushing, noneHandwashing,
                 usedForNone, appearance, smell, taste, rottenEgg, sediment, feathery,
-                hardness, chlorine, alkalinity, copper, iron, pH);
+                hardness, chlorine, alkalinity, copper, iron, pH, bacteria, pesticide, lead,
+                nitrite, nitrate);
 
         // Display results summary to the screen
         display(message);
@@ -202,7 +238,8 @@ public class MainActivity extends AppCompatActivity {
       String participantID, String timeRunning, String waterTemperature, Boolean drinking,
       Boolean brushing, Boolean handwashing, Boolean none, String appearance, String smell,
       String taste, Boolean rottenEgg, Boolean sediment, Boolean feathery, String hardness,
-      String chlorine, String alkalinity, String copper, String iron, String pH) {
+      String chlorine, String alkalinity, String copper, String iron, String pH, Boolean bacteria,
+      Boolean pesticide, Boolean lead, Boolean nitrite, Boolean nitrate) {
 
         String summaryMessage = "\n " + getString(R.string.tablet_number) + ": " + participantID;
         summaryMessage += "\n " + getString(R.string.date_of_collection) + ": " + dateCollection;
@@ -230,6 +267,13 @@ public class MainActivity extends AppCompatActivity {
         summaryMessage += "\n " + getString(R.string.iron) + ": " + iron + " " + getString(R.string.concentration_ppm) + "\n";
 
         summaryMessage += "\n " + getString(R.string.ph) + " " + pH + "\n";
+
+        summaryMessage += "\n " + getString(R.string.bacteria) + ": " + bacteria;
+        summaryMessage += "\n " + getString(R.string.pesticide) + ": " + pesticide;
+        summaryMessage += "\n " + getString(R.string.lead) + ": " + lead + "\n";
+
+        summaryMessage += "\n " + getString(R.string.nitrite) + ": " + nitrite;
+        summaryMessage += "\n " + getString(R.string.nitrate) + ": " + nitrate;
 
         return summaryMessage;
     }
