@@ -57,4 +57,7 @@
     <string name="summary">Summary: </string>
     <string name="running_time_short">Running Time</string>
     <string name="water_temp_short">Temperature</string>
+    <string name="appearance_short">Color</string>
+    <string name="smell_short">Smell</string>
+    <string name="taste_short">Taste</string>
 </resources>

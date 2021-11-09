@@ -115,14 +115,26 @@ public class MainActivity extends AppCompatActivity {
         else
             {waterTemperature = "";}
 
+        // Get appearance of water
+        EditText appearanceField = (EditText) findViewById(R.id.water_appearance_description);
+        Editable appearanceEditable = appearanceField.getText();
+        String appearance = appearanceEditable.toString();
 
+        // Get smell of water
+        EditText smellField = (EditText) findViewById(R.id.water_smell_description);
+        Editable smellEditable = smellField.getText();
+        String smell = smellEditable.toString();
 
+        // Get taste of water
+        EditText tasteField = (EditText) findViewById(R.id.water_taste_description);
+        Editable tasteEditable = tasteField.getText();
+        String taste = tasteEditable.toString();
 
 
         // Display the results summary
         String message = createResultsSummary(dateCollection, timeCollection, tabletNumber,
                 timeRunning, waterTemperature, noneDrinking, noneBrushing, noneHandwashing,
-                usedForNone);
+                usedForNone, appearance, smell, taste);
 
         // Display results summary to the screen
         display(message);
@@ -136,18 +148,24 @@ public class MainActivity extends AppCompatActivity {
      */
     private String createResultsSummary(String dateCollection, String timeCollection,
       String participantID, String timeRunning, String waterTemperature, Boolean drinking,
-      Boolean brushing, Boolean handwashing, Boolean none) {
+      Boolean brushing, Boolean handwashing, Boolean none, String appearance, String smell,
+      String taste) {
 
         String summaryMessage = "\n " + getString(R.string.tablet_number) + ": " + participantID;
         summaryMessage += "\n " + getString(R.string.date_of_collection) + ": " + dateCollection;
         summaryMessage += "\n " + getString(R.string.time_of_collection) + ": " + timeCollection;
         summaryMessage += "\n " + getString(R.string.running_time_short) + ": " + timeRunning;
         summaryMessage += "\n " + getString(R.string.water_temp_short) + ": " + waterTemperature + "\n";
-        
+
         summaryMessage += "\n " + getString(R.string.drinking) + ": " + drinking;
         summaryMessage += "\n " + getString(R.string.brushing_teeth) + ": " + brushing;
         summaryMessage += "\n " + getString(R.string.handwashing) + ": " + handwashing;
-        summaryMessage += "\n " + getString(R.string.none) + ": " + none;
+        summaryMessage += "\n " + getString(R.string.none) + ": " + none + "\n";
+
+        summaryMessage += "\n " + getString(R.string.appearance_short) + ": " + appearance + "\n";
+        summaryMessage += "\n " + getString(R.string.smell_short) + ": " + smell + "\n";
+        summaryMessage += "\n " + getString(R.string.taste_short) + ": " + taste + "\n";
+        
 
         return summaryMessage;
     }
