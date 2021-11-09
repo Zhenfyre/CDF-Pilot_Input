@@ -64,5 +64,6 @@
     <string name="sediment_short">Sediment</string>
     <string name="feathery_short">Feathery</string>
     <string name="concentration_ppm">ppm</string>
-
+    <string name="email_subject">CDF Water Testing Results Summary</string>
+    <string name="email_address">communitydrivenflint@gmail.com</string>
 </resources>

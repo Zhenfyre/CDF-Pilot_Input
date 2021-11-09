@@ -1,6 +1,8 @@
 package com.example.cdf_pilot_input;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -216,7 +218,6 @@ public class MainActivity extends AppCompatActivity {
         if (ifNitrate)
         {nitrate = true;}
 
-
         // Display the results summary
         String message = createResultsSummary(dateCollection, timeCollection, tabletNumber,
                 timeRunning, waterTemperature, noneDrinking, noneBrushing, noneHandwashing,
@@ -225,7 +226,23 @@ public class MainActivity extends AppCompatActivity {
                 nitrite, nitrate);
 
         // Display results summary to the screen
-        display(message);
+        // display(message);
+
+        String subject = getString(R.string.email_subject);
+        String email_address = getString(R.string.email_address);
+
+        // Use an intent to launch an email app.
+        // Send the results summary in the email body.
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{email_address});
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     /**
