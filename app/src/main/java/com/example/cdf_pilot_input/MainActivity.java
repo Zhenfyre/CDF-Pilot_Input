@@ -151,10 +151,42 @@ public class MainActivity extends AppCompatActivity {
         if (ifFeathery)
         {feathery = true;}
 
+        // Get Total Hardness
+        EditText hardnessField = (EditText) findViewById(R.id.enter_hardness);
+        Editable hardnessEditable = hardnessField.getText();
+        String hardness = hardnessEditable.toString();
+
+        // Get Total Chlorine
+        EditText chlorineField = (EditText) findViewById(R.id.enter_chlorine);
+        Editable chlorineEditable = chlorineField.getText();
+        String chlorine = chlorineEditable.toString();
+
+        // Get Alkalinity
+        EditText alkalinityField = (EditText) findViewById(R.id.enter_alkalinity);
+        Editable alkalinityEditable = alkalinityField.getText();
+        String alkalinity = alkalinityEditable.toString();
+
+        // Get Copper
+        EditText copperField = (EditText) findViewById(R.id.enter_copper);
+        Editable copperEditable = copperField.getText();
+        String copper = copperEditable.toString();
+
+        // Get Iron
+        EditText ironField = (EditText) findViewById(R.id.enter_iron);
+        Editable ironEditable = ironField.getText();
+        String iron = ironEditable.toString();
+
+        // Get pH
+        EditText phField = (EditText) findViewById(R.id.enter_pH);
+        Editable phEditable = phField.getText();
+        String pH = phEditable.toString();
+
+
         // Display the results summary
         String message = createResultsSummary(dateCollection, timeCollection, tabletNumber,
                 timeRunning, waterTemperature, noneDrinking, noneBrushing, noneHandwashing,
-                usedForNone, appearance, smell, taste, rottenEgg, sediment, feathery);
+                usedForNone, appearance, smell, taste, rottenEgg, sediment, feathery,
+                hardness, chlorine, alkalinity, copper, iron, pH);
 
         // Display results summary to the screen
         display(message);
@@ -169,7 +201,8 @@ public class MainActivity extends AppCompatActivity {
     private String createResultsSummary(String dateCollection, String timeCollection,
       String participantID, String timeRunning, String waterTemperature, Boolean drinking,
       Boolean brushing, Boolean handwashing, Boolean none, String appearance, String smell,
-      String taste, Boolean rottenEgg, Boolean sediment, Boolean feathery) {
+      String taste, Boolean rottenEgg, Boolean sediment, Boolean feathery, String hardness,
+      String chlorine, String alkalinity, String copper, String iron, String pH) {
 
         String summaryMessage = "\n " + getString(R.string.tablet_number) + ": " + participantID;
         summaryMessage += "\n " + getString(R.string.date_of_collection) + ": " + dateCollection;
@@ -189,6 +222,14 @@ public class MainActivity extends AppCompatActivity {
         summaryMessage += "\n " + getString(R.string.rotten_egg_short) + ": " + rottenEgg;
         summaryMessage += "\n " + getString(R.string.sediment_short) + ": " + sediment;
         summaryMessage += "\n " + getString(R.string.feathery_short) + ": " + feathery + "\n";
+
+        summaryMessage += "\n " + getString(R.string.total_hardness) + ": " + hardness + " " + getString(R.string.concentration_ppm);
+        summaryMessage += "\n " + getString(R.string.total_chlorine) + ": " + chlorine + " " + getString(R.string.concentration_ppm);
+        summaryMessage += "\n " + getString(R.string.alkalinity) + ": " + alkalinity + " " + getString(R.string.concentration_ppm);
+        summaryMessage += "\n " + getString(R.string.copper) + ": " + copper + " " + getString(R.string.concentration_ppm);
+        summaryMessage += "\n " + getString(R.string.iron) + ": " + iron + " " + getString(R.string.concentration_ppm) + "\n";
+
+        summaryMessage += "\n " + getString(R.string.ph) + " " + pH + "\n";
 
         return summaryMessage;
     }

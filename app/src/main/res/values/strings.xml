@@ -63,5 +63,6 @@
     <string name="rotten_egg_short">Rotten Egg Smell</string>
     <string name="sediment_short">Sediment</string>
     <string name="feathery_short">Feathery</string>
+    <string name="concentration_ppm">ppm</string>
 
 </resources>
