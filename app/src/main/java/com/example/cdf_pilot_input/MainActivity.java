@@ -130,11 +130,31 @@ public class MainActivity extends AppCompatActivity {
         Editable tasteEditable = tasteField.getText();
         String taste = tasteEditable.toString();
 
+        // Get rotten egg smell
+        boolean rottenEgg = false;
+        RadioButton rottenEggButton = (RadioButton) findViewById(R.id.rottenEgg_yes_radio_button);
+        boolean ifRottenEgg = rottenEggButton.isChecked();
+        if (ifRottenEgg)
+        {rottenEgg = true;}
+
+        // Get sediment
+        boolean sediment = false;
+        RadioButton sedimentButton = (RadioButton) findViewById(R.id.sediment_yes_radio_button);
+        boolean ifSediment = sedimentButton.isChecked();
+        if (ifSediment)
+        {sediment = true;}
+
+        // Get feathery
+        boolean feathery = false;
+        RadioButton featheryButton = (RadioButton) findViewById(R.id.feathery_yes_radio_button);
+        boolean ifFeathery = featheryButton.isChecked();
+        if (ifFeathery)
+        {feathery = true;}
 
         // Display the results summary
         String message = createResultsSummary(dateCollection, timeCollection, tabletNumber,
                 timeRunning, waterTemperature, noneDrinking, noneBrushing, noneHandwashing,
-                usedForNone, appearance, smell, taste);
+                usedForNone, appearance, smell, taste, rottenEgg, sediment, feathery);
 
         // Display results summary to the screen
         display(message);
@@ -149,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
     private String createResultsSummary(String dateCollection, String timeCollection,
       String participantID, String timeRunning, String waterTemperature, Boolean drinking,
       Boolean brushing, Boolean handwashing, Boolean none, String appearance, String smell,
-      String taste) {
+      String taste, Boolean rottenEgg, Boolean sediment, Boolean feathery) {
 
         String summaryMessage = "\n " + getString(R.string.tablet_number) + ": " + participantID;
         summaryMessage += "\n " + getString(R.string.date_of_collection) + ": " + dateCollection;
@@ -165,7 +185,10 @@ public class MainActivity extends AppCompatActivity {
         summaryMessage += "\n " + getString(R.string.appearance_short) + ": " + appearance + "\n";
         summaryMessage += "\n " + getString(R.string.smell_short) + ": " + smell + "\n";
         summaryMessage += "\n " + getString(R.string.taste_short) + ": " + taste + "\n";
-        
+
+        summaryMessage += "\n " + getString(R.string.rotten_egg_short) + ": " + rottenEgg;
+        summaryMessage += "\n " + getString(R.string.sediment_short) + ": " + sediment;
+        summaryMessage += "\n " + getString(R.string.feathery_short) + ": " + feathery + "\n";
 
         return summaryMessage;
     }

@@ -60,4 +60,8 @@
     <string name="appearance_short">Color</string>
     <string name="smell_short">Smell</string>
     <string name="taste_short">Taste</string>
+    <string name="rotten_egg_short">Rotten Egg Smell</string>
+    <string name="sediment_short">Sediment</string>
+    <string name="feathery_short">Feathery</string>
+
 </resources>
