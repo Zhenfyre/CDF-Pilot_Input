@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CDFPilot_Input">
         <activity
-            android:name=".MainActivity"
+            android:name="flint_cdf.pilot.cdf_pilot_input.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

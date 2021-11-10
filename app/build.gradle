@@ -6,7 +6,7 @@ android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "com.example.cdf_pilot_input"
+        applicationId "flintcdf.pilot.cdf_pilot_input"
         minSdk 21
         targetSdk 30
         versionCode 1

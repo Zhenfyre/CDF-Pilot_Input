@@ -1,6 +1,5 @@
-package com.example.cdf_pilot_input;
+package flint_cdf.pilot.cdf_pilot_input;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -12,14 +11,14 @@ import android.text.Editable;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.cdf_pilot_input.R;
 
 /**
  * This app collects water testing results and prepares and email for submission

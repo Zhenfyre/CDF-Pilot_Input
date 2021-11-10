@@ -1,4 +1,4 @@
-package com.example.cdf_pilot_input;
+package flint_cdf.pilot.cdf_pilot_input;
 
 import org.junit.Test;
 
