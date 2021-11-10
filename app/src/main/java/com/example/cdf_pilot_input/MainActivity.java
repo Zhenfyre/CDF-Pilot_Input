@@ -2,18 +2,24 @@ package com.example.cdf_pilot_input;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * This app collects water testing results and prepares and email for submission
@@ -239,6 +245,16 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         intent.putExtra(Intent.EXTRA_TEXT, message);
 
+
+        Toast toast = Toast.makeText(this, getString(R.string.thank_you), Toast.LENGTH_LONG);
+        LinearLayout toastLayout = (LinearLayout) toast.getView();
+        TextView toastTV = (TextView) toastLayout.getChildAt(0);
+        toastTV.setTextSize(48);
+        toastTV.setGravity(Gravity.CENTER);
+        toastTV.setBackgroundColor(Color.parseColor("#e1ff00"));
+        toastTV.setTextColor(Color.parseColor("#4800ff"));
+        toastTV.setTypeface(null, Typeface.BOLD);
+        toast.show();
 
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);

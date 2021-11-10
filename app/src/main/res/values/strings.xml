@@ -66,4 +66,6 @@
     <string name="concentration_ppm">ppm</string>
     <string name="email_subject">CDF Water Testing Results Summary</string>
     <string name="email_address">communitydrivenflint@gmail.com</string>
+    <string name="thank_you">Lastly, click the send arrow in the top right!</string>
+
 </resources>
