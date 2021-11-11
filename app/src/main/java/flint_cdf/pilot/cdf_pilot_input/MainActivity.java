@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -230,9 +231,6 @@ public class MainActivity extends AppCompatActivity {
                 hardness, chlorine, alkalinity, copper, iron, pH, bacteria, pesticide, lead,
                 nitrite, nitrate);
 
-        // Display results summary to the screen
-        // display(message);
-
         String subject = getString(R.string.email_subject);
         String email_address = getString(R.string.email_address);
 
@@ -243,21 +241,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_EMAIL, new String[]{email_address});
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         intent.putExtra(Intent.EXTRA_TEXT, message);
-
+        startActivity(intent);
 
         Toast toast = Toast.makeText(this, getString(R.string.thank_you), Toast.LENGTH_LONG);
-        LinearLayout toastLayout = (LinearLayout) toast.getView();
-        TextView toastTV = (TextView) toastLayout.getChildAt(0);
-        toastTV.setTextSize(48);
-        toastTV.setGravity(Gravity.CENTER);
-        toastTV.setBackgroundColor(Color.parseColor("#e1ff00"));
-        toastTV.setTextColor(Color.parseColor("#4800ff"));
-        toastTV.setTypeface(null, Typeface.BOLD);
         toast.show();
-
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
     }
 
     /**
@@ -319,5 +306,4 @@ public class MainActivity extends AppCompatActivity {
         summaryTextView.setVisibility(View.VISIBLE);
 
     }
-
 }
